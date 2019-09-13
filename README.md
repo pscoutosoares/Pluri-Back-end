@@ -53,17 +53,49 @@ php artisan db:seed
 substituir localhost pelo endereço configurado para a variável API_DOMAIN
 
 ```
-GET  - http://api.localhost/aluno           -> Retorna todos os alunos
-GET  - http://api.localhost/aluno/{id_aluno) -> Retorna o aluno com id informado
+GET  - http://api.localhost/aluno               -> Retorna todos os alunos
+GET  - http://api.localhost/aluno/{id_aluno)    -> Retorna o aluno com id informado
 
-POST - http://api.localhost/aluno           -> Cria um novo aluno, necessario enviar um json no formato ex:
+POST - http://api.localhost/aluno               -> Cria um novo aluno, necessario enviar um json no formato ex:
 {'nome':'pedro','email': 'psco@gmail.com', 'sexo': 'masculino', 'dataNascimento':'24/01/1995'}
 
-PUT - http://api.localhost/aluno/{id_aluno}  -> Modifica um aluno já criado através do id do aluno. As informações a serem enviadas necessitam estar em um json, ex: {'nome':'soares','email': 'psco5@gmail.com'}
+PUT - http://api.localhost/aluno/{id_aluno}     -> Modifica um aluno já criado através do id do aluno. As informações a serem enviadas necessitam estar em um json, ex: {'nome':'soares','email': 'psco5@gmail.com'}
 
-DELETE -  http://api.localhost/aluno/{id_aluno} -> deleta um aluno com id especificado 
+DELETE -  http://api.localhost/aluno/{id_aluno}  -> deleta um aluno com id especificado 
  
 ```
+
+
+### CRUD Curso 
+
+```
+GET  - http://api.localhost/curso               -> Retorna todos os cursos
+GET  - http://api.localhost/curso/{id_curso)    -> Retorna o curso com id informado
+
+POST - http://api.localhost/curso               -> Cria um novo curso, necessario enviar um json no formato ex:
+{'titulo':'Computação','descricao': 'Curso sobre computação'}
+
+PUT - http://api.localhost/curso/{id_curso}  -> Modifica um curso já criado através do id do curso. As informações a serem enviadas necessitam estar em um json, ex: {'titulo':'Gastronomia'}
+
+DELETE -  http://api.localhost/curso/{id_curso} -> deleta um curso com id especificado 
+ 
+```
+
+### CRUD Matricula 
+
+```
+GET  - http://api.localhost/matricula                   -> Retorna todas as matrículas
+GET  - http://api.localhost/matricula/{id_matricula)    -> Retorna a matrícula com id informado
+
+POST - http://api.localhost/matricula                   -> Cria um novo curso, necessario enviar um json no formato ex:
+{'usuario_id':1,'curso_id': 1}
+
+PUT - http://api.localhost/matricula/{id_matricula}     -> Modifica a matrícula já criada através do id. As informações a serem enviadas necessitam estar em um json, ex: {'curso_id': 5}
+
+DELETE -  http://api.localhost/matricula/{id_matricula} -> deleta uma matricula com id especificado 
+ 
+```
+
 
 
 
