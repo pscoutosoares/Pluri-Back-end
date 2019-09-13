@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 */
 
 Route::apiResource('/aluno', 'AlunoController');
+Route::get('/aluno/search/{nome}/{email}', 'AlunoController@searchByEmailAndName');
+Route::get('/stats', 'AlunoController@totalStudentsBySexAndCourse');
 Route::apiResource('/curso', 'CursoController');
 Route::apiResource('/matricula', 'MatriculaController');
 
