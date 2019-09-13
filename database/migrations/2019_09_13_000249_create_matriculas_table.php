@@ -18,8 +18,8 @@ class CreateMatriculasTable extends Migration
             $table->integer('aluno_id')->unsigned();
             $table->integer('curso_id')->unsigned();
 
-            $table->foreign('aluno_id')->references('id')->on('alunos');
-            $table->foreign('curso_id')->references('id')->on('cursos');
+            $table->foreign('aluno_id')->references('id')->on('alunos')->onDelete('cascade');;
+            $table->foreign('curso_id')->references('id')->on('cursos')->onDelete('cascade');;
 
             $table->timestamps();
         });

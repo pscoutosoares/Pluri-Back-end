@@ -12,4 +12,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/aluno/{aluno}', 'AlunoController@Listar');
+Route::apiResource('/aluno', 'AlunoController');
+Route::apiResource('/curso', 'CursoController');
+Route::apiResource('/matricula', 'MatriculaController');
+
