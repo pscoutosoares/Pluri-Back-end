@@ -96,6 +96,14 @@ DELETE -  http://api.localhost/matricula/{id_matricula} -> deleta uma matricula 
  
 ```
 
+### Pesquisa pelo nome e email
 
+A pesquisa é realizada através de uma requisição GET da seguinte forma:
+
+```
+GET - http://api.localhost/aluno/search/{nome}/{email} 
+```
+
+Onde é necessario substituir as variáveis entre chaves com o nome e email a ser buscado.
 
 
