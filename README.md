@@ -53,9 +53,16 @@ php artisan db:seed
 substituir localhost pelo endereço configurado para a variável API_DOMAIN
 
 ```
-GET -  http://api.localhost/aluno           -> retorna todos os alunos
-GET -  http://api.localhost/aluno{id_aluno) -> retorna o aluno com id informado
-PUT -  http://api.localhost/aluno
+GET  - http://api.localhost/aluno           -> Retorna todos os alunos
+GET  - http://api.localhost/aluno/{id_aluno) -> Retorna o aluno com id informado
+
+POST - http://api.localhost/aluno           -> Cria um novo aluno, necessario enviar um json no formato ex:
+{'nome':'pedro','email': 'psco@gmail.com', 'sexo': 'masculino', 'dataNascimento':'24/01/1995'}
+
+PUT - http://api.localhost/aluno/{id_aluno}  -> Modifica um aluno já criado através do id do aluno. As informações a serem enviadas necessitam estar em um json, ex: {'nome':'soares','email': 'psco5@gmail.com'}
+
+DELETE -  http://api.localhost/aluno/{id_aluno} -> deleta um aluno com id especificado 
+ 
 ```
 
 
